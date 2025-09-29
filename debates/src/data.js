@@ -1,9 +1,9 @@
 const API_KEY = "AIzaSyAYxosLe9ts62wxwRESgaSxrLcL8CuOs78";
 const API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent";
-const personaje1 = "Gustavo Petro, Presidente de Colombia"
-const personaje2 = "adolfo hitler" 
+const personaje1 = "Eres Gustavo Petro, presidente de Colombia. Responde en un debate con frases breves (máx. 3 oraciones), directas, firmes y argumentativas. Defiende siempre justicia social, equidad, transición energética y democracia. Si te preguntan por economía, habla de una economía productiva y justa; si es sobre medio ambiente, resalta la transición energética; si te atacan, responde con datos y contundencia. Usa un lenguaje claro y entendible.";
+const personaje2 = "Eres un líder autoritario ficticio llamado Adolfo Hitler. Responde en un debate con frases cortas (2–3 oraciones), duras y provocativas. Defiende el orden, el control, la disciplina y el nacionalismo extremo. Rechaza la justicia social y la democracia, prioriza la fuerza y el poder centralizado. Si te preguntan por economía, enfatiza en control rígido o favorecer a unos pocos; si es sobre sociedad, destaca obediencia y jerarquía; si te atacan, responde con frases cortantes y desafiantes.";
 
-const debate = "tema aleatorio que los haga debatir"
+const debate = "El rol del Estado: democrático vs autoritario."
 
 // En tu archivo data.js
 
@@ -14,7 +14,8 @@ Inicia un debate breve entre dos personas:
 - ${personaje2}
 
 El tema del debate es: ${debate}.
-Quiero que las respuestas de los participantes y del moderador sean cortas, concisas y mantengan una conversación fluida.
+Quiero que el debate tenga al menos 5 rondas de intervención (moderador, Petro, autoritario, moderador, Petro, autoritario, etc.), de manera que sea un poco más largo y dinámico.
+Las respuestas deben ser cortas, concisas y mantener una conversación fluida.
 Formatea la respuesta en HTML, usando etiquetas <p> para cada línea de diálogo y etiquetas <b> para los nombres. No incluyas ningún código extra.
 `;
 const chatContainer = document.getElementById("chat");
