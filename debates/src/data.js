@@ -8,7 +8,7 @@ const debate = "El rol del Estado: democrático vs autoritario."
 // En tu archivo data.js
 
 const prompt = `
-Actúa como un moderador llamado Deivi. 
+Actúa como un moderador llamado roonie coleman. 
 Inicia un debate breve entre dos personas:
 - ${personaje1}
 - ${personaje2}
