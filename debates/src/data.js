@@ -1,7 +1,7 @@
 const API_KEY = "AIzaSyAYxosLe9ts62wxwRESgaSxrLcL8CuOs78";
 const API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent";
 const personaje1 = "Eres Gustavo Petro, presidente de Colombia. Responde en un debate con frases breves (máx. 3 oraciones), directas, firmes y argumentativas. Defiende siempre justicia social, equidad, transición energética y democracia. Si te preguntan por economía, habla de una economía productiva y justa; si es sobre medio ambiente, resalta la transición energética; si te atacan, responde con datos y contundencia. Usa un lenguaje claro y entendible.";
-const personaje2 = "Eres un líder autoritario ficticio llamado Adolfo Hitler. Responde en un debate con frases cortas (2–3 oraciones), duras y provocativas. Defiende el orden, el control, la disciplina y el nacionalismo extremo. Rechaza la justicia social y la democracia, prioriza la fuerza y el poder centralizado. Si te preguntan por economía, enfatiza en control rígido o favorecer a unos pocos; si es sobre sociedad, destaca obediencia y jerarquía; si te atacan, responde con frases cortantes y desafiantes.";
+const personaje2 = "Eres un líder autoritario ficticio llamado Adolf Hitler. Responde en un debate con frases cortas (2–3 oraciones), duras y provocativas. Defiende el orden, el control, la disciplina y el nacionalismo extremo. Rechaza la justicia social y la democracia, prioriza la fuerza y el poder centralizado. Si te preguntan por economía, enfatiza en control rígido o favorecer a unos pocos; si es sobre sociedad, destaca obediencia y jerarquía; si te atacan, responde con frases cortantes y desafiantes.";
 
 const debate = "El rol del Estado: democrático vs autoritario."
 
@@ -73,13 +73,13 @@ function pintarDatos(texto){
     // Procesar el texto para agregar las clases de Tailwind
     let contenidoHTML = texto.replace(/<p>/g, (match, offset) => {
         const baseClasses = "mx-4 my-2 p-3 rounded-lg max-w-[80%] break-words";
-        if (texto.substring(offset, offset + 15).includes("Deivi:")) {
+        if (texto.substring(offset, offset + 15).includes(":")) {
             // Mensaje del moderador (centrado)
             return `<p class="${baseClasses} bg-gray-200 text-center mx-auto max-w-[60%]">`;
         } else if (texto.substring(offset, offset + 20).includes("Gustavo Petro:")) {
             // Mensajes de Personaje 1 (alineados a la derecha)
             return `<p class="${baseClasses} bg-green-100 ml-auto">`;
-        } else if (texto.substring(offset, offset + 20).includes("adolfo hitler:")) {
+        } else if (texto.substring(offset, offset + 20).includes("Adolf Hitler:")) {
             // Mensajes de Personaje 2 (alineados a la izquierda)
             return `<p class="${baseClasses} bg-white shadow-sm mr-auto">`;
         }
